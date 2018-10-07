@@ -1,0 +1,5 @@
+project(multistatic_radar)
+add_executable(simulator main.c csv_parser.c)
+set(CMAKE_C_COMPILER mpicc)
+set(CMAKE_CXX_COMPILER mpicxx)
+target_link_libraries(simulator mpi m)
